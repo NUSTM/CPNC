@@ -155,9 +155,9 @@ class BertLayer(nn.Module):
         bert_model = "bert-large-uncased"
         self.dataset = dataset
         if self.dataset == "conceptnet":
-            output_dir = "bert_model_embeddings/nodes-lm-conceptnet/"
+            output_dir = "../bert_model_embeddings/nodes-lm-conceptnet/"
         elif self.dataset == "atomic":
-            output_dir = "bert_model_embeddings/nodes-lm-atomic/"
+            output_dir = "../bert_model_embeddings/nodes-lm-atomic/"
 
         self.filename = os.path.join(output_dir, self.dataset + "_bert_embeddings.pt")
         print(self.filename)
