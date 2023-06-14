@@ -3,16 +3,24 @@
 
 Codes for the paper [Commonsense Knowledge Graph Completion Via Contrastive Pretraining and Node Clustering](https://arxiv.org/pdf/2305.17019.pdf). 
 
-## Requirements
+## Environment
 
 - python=3.10.6
 - cuda=11.6
 - conda install -c dglteam dgl-cuda11.6 
 - Run `pip install -r requirements.txt` to install the required packages.
 
-## Training 
+## Data
 
 The dataset are provided in [CPNC-S-data](https://pan.baidu.com/s/1bHQT9fHtvlgUHf-4NhEmcA?pwd=jgym  ) and [CPNC-I-data ](https://pan.baidu.com/s/1K7pFff0zrxMzpDhmBSHR8Q?pwd=rxpv ). Plese download it and unzip the file under CPNC-S and CPNC-I, respectively.
+
+## Training 
+
+There are three parts in this repo:
+
+- Constrastive Pretraining
+- Nodes Clustering
+- CSKG Completion
 
 ### Constrastive Pretraining
 
@@ -32,30 +40,30 @@ python get_nodes_embedding_ConceptNet.py  # get the semantic embeddings of nodes
 
 the semantic embeddings of nodes are saved in `./bert_model_embeddings/nodes-lm-atomic/`  and `./bert_model_embeddings/nodes-lm-conceptnet/` directory.
 
-The CPNC-I model need the extra fasttext embeddings of nodes, and need to transfor the semantic embeddings of nodes to a dict format.
+The CPNC-I model need the extra fasttext embeddings of nodes.
 
-We provide those embeddings: [saved_entity_embedding]( https://pan.baidu.com/s/1tb_VDern8FO2NI8FwNaNpg?pwd=c8c5).
+You can download the embeddings [here]( https://pan.baidu.com/s/1tb_VDern8FO2NI8FwNaNpg?pwd=c8c5).
 
-###  Node Clustering
+###  Nodes Clustering
 
-Then, performing nodes clustering:
+Then, perform nodes clustering:
 
 ```bash
-python K_means_Atomic.py  # get the semantic embeddings of nodes in ATOMIC
-python K_means_ConceptNet.py  # get the semantic embeddings of nodes in CN-100K
+python K_means_Atomic.py  # get the nodes clustering results in ATOMIC
+python K_means_ConceptNet.py  # get the nodes clustering results in CN-100K
 ```
 
 The nodes clustering results are saved in `./Concept_Centre/atomic/`  and `./Concept_Centre/ConceptNet/`.
 
-We provide our nodes clustering results: [Concept_Centre](https://pan.baidu.com/s/1AiX-wfZTDiB9lcaZJ2pSsQ?pwd=legy ).
+You can download the nodes clustering [here](https://pan.baidu.com/s/1AiX-wfZTDiB9lcaZJ2pSsQ?pwd=legy ).
 
-### Completion CSKG
+### CSKG Completion
 
-For reproducing the results in our paper, please download the semantic embedding of nodes and nodes clustering result data and unzip it under CPNC-S and CPNC-I, respectively.
+For reproducing the results in our paper, please download the semantic embeddings of nodes and nodes clustering result data and unzip it under CPNC-S and CPNC-I, respectively.
 
 #### CPNC-S Model
 
-To train the CPNC-S model ,  you need to run the following command:
+To train the CPNC-S model ,  enter the following directory:
 
 ```bash
 cd CPNC/CPNC-S
@@ -77,7 +85,7 @@ This trains the model and saves the model under the`./saved_models_ConceptNet/` 
 
 #### CPNC-I Model
 
-To train the CPNC-I model ,  you need to run the following command:
+To train the CPNC-I model ,  enter the following directory:
 
 ```bash
 cd CPNC/CPNC-I
