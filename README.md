@@ -34,17 +34,15 @@ Code for the paper [Commonsense Knowledge Graph Completion Via Contrastive Pretr
 
 ## Training 
 
-### Data
+### CPNC-S Model
 
-The dataset, semantic embedding of node and nodes clustering data are provided in [CPNC-S-data](https://pan.baidu.com/s/1AyUGZlUT2-ri2Sj5w_6Yzg?pwd=om9e ) and [CPNC-I-data ](https://pan.baidu.com/s/1DyMJs_lumfAf5GsPELsEEg?pwd=xe4j ). Plese donwload it and unzip the file under CPNC-S and CPNC-I, respectively. Because we didn't set the random seed in Constrastive Pretraining and Nodes Clustering, so we advice you use the embedding we have obtained.
-
-### Semantic Embedding and Node Clustering
-
- You can rerun the result as following:
+To train the CPNC-S model ,  you need to run the following command:
 
 ```bash
 cd CPNC/CPNC-S
 ```
+
+First Step, you need to get the semantic embedding and node clustering. Because we didn't set the random seed in this step, so we advice you use the embedding we have obtained [Link](Link). You also can rerun the result as following:
 
 Train Constrastive Pretraining Model for ATOMIC and CN-100K datasets:
 
@@ -70,14 +68,6 @@ python K_means_ConceptNet.py
 ```
 
 The nodes cluster result are saved in `/Concept_Centre/atomic/`  and `/Concept_Centre/ConceptNet/`.
-
-### CPNC-S Model
-
-To train the CPNC-S model ,  you need to run the following command:
-
-```bash
-cd CPNC/CPNC-S
-```
 
 Finally, in order to train the CPNC-S model on CN-100K, run the following command:
 
