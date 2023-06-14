@@ -5,8 +5,8 @@ Codes for the paper [Commonsense Knowledge Graph Completion Via Contrastive Pret
 
 ## Environment
 
-- python=3.10.6
-- cuda=11.6
+- Python 3.10.6
+- Cuda 11.6
 - conda install -c dglteam dgl-cuda11.6 
 - Run `pip install -r requirements.txt` to install the required packages.
 
