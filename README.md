@@ -12,7 +12,7 @@ Codes for the paper [Commonsense Knowledge Graph Completion Via Contrastive Pret
 
 ## Data
 
-The dataset are provided in [CPNC-S-data](https://pan.baidu.com/s/1bHQT9fHtvlgUHf-4NhEmcA?pwd=jgym  ) and [CPNC-I-data ](https://pan.baidu.com/s/1K7pFff0zrxMzpDhmBSHR8Q?pwd=rxpv ). Plese download it and unzip the file under CPNC-S and CPNC-I, respectively.
+The dataset are provided in [CPNC-S-data](https://pan.baidu.com/s/1bHQT9fHtvlgUHf-4NhEmcA?pwd=jgym  ) and [CPNC-I-data ](https://pan.baidu.com/s/1K7pFff0zrxMzpDhmBSHR8Q?pwd=rxpv ). Plese download it and unzip the file under `./CSKGCompletion/CPNC-S/`  and `./CSKGCompletion/CPNC-I/`, respectively.
 
 ## Training 
 
