@@ -54,6 +54,9 @@ nodes_index_to_cluster_index = []
 for node in nodes:
     nodes_index_to_cluster_index.append(nodes_cluster[node])
 
+if not os.path.exists('../Concept_Centre/atomic/'):
+    os.makedirs('../Concept_Centre/atomic/')
+
 f = open('../Concept_Centre/atomic/nodes_cluster.json', 'w')
 json.dump(nodes_cluster, f)
 f.close()

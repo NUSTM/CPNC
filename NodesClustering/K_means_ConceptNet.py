@@ -54,6 +54,9 @@ nodes_index_to_cluster_index = []
 for node in nodes:
     nodes_index_to_cluster_index.append(nodes_cluster[node])
 
+if not os.path.exists('../Concept_Centre/ConceptNet/'):
+    os.makedirs('../Concept_Centre/ConceptNet/')
+
 f = open('../Concept_Centre/ConceptNet/nodes_cluster.json', 'w')
 json.dump(nodes_cluster, f)
 f.close()

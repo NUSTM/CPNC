@@ -16,6 +16,9 @@ for line in data_nodes:
 f.close()
 
 model_save_path = '../CP_model/ConceptNet/'
+if not os.path.exists(model_save_path):
+    os.makedirs(model_save_path)
+    
 sentence_model = SentenceTransformer(model_save_path)
 all_nodes_features = sentence_model.encode(nodes)
 all_nodes_features = torch.from_numpy(all_nodes_features)

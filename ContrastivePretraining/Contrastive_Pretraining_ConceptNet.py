@@ -41,7 +41,8 @@ num_epochs = 1
 
 # Save path of the model
 model_save_path = f'../CP_model/{datasets_name}'
-
+if not os.path.exists(model_save_path):
+    os.makedirs(model_save_path)
 
 # Here we define our SentenceTransformer model
 print(model_name)

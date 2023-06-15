@@ -66,41 +66,41 @@ For reproducing the results in our paper, please download the semantic embedding
 To train the CPNC-S model ,  enter the following directory:
 
 ```bash
-cd CPNC/CPNC-S
+cd CPNC/CSKGCompletion/CPNC-S
 ```
 
 Finally, in order to train the CPNC-S model on CN-100K, run the following command:
 
 ```bash
-python -u src/run_kbc_subgraph.py --dataset conceptnet --evaluate-every 10 --n-layers 2 --graph-batch-size 60000  --bert_concat --Concept_center_path '../Concept_Centre/ConceptNet/'
+python -u src/run_kbc_subgraph.py --dataset conceptnet --evaluate-every 10 --n-layers 2 --graph-batch-size 60000  --bert_concat --Concept_center_path '../../Concept_Centre/ConceptNet/'
 ```
 
 In order to train the CPNC-S model on ATOMIC, run the following command:
 
 ```bash
-python -u src/run_kbc_subgraph.py --dataset atomic  --evaluate-every 10 --n-layers 2 --graph-batch-size 20000  --bert_concat --Concept_center_path '../Concept_Centre/atomic/'
+python -u src/run_kbc_subgraph.py --dataset atomic  --evaluate-every 10 --n-layers 2 --graph-batch-size 20000  --bert_concat --Concept_center_path '../../Concept_Centre/atomic/'
 ```
 
-This trains the model and saves the model under the`./saved_models_ConceptNet/` and  `./saved_models_ATOMIC/` directory.
+This trains the model and saves the model under the`./saved_models/`.
 
 #### CPNC-I Model
 
 To train the CPNC-I model ,  enter the following directory:
 
 ```bash
-cd CPNC/CPNC-I
+cd CPNC/CSKGCompletion/CPNC-I
 ```
 
 Then, in order to train the CPNC-I model on CN-100K, run the following command:
 
 ```bash
-bash train.sh conceptnet-100k 15 saved/saved_ckg_model saved_entity_embedding/conceptnet/cn_bert_emb_dict.pkl 500 256 100 ConvTransE 10 1234 1e-20 0.25 0.25 0.25 0.0003 1024 Adam 5 300 RWGCN_NET 50000 1324 ../bert_model_embeddings/nodes-lm-conceptnet/cn_fasttext_dict.pkl 300 0.2 5 100 50 0.1 ../Concept_Centre/ConceptNet/
+bash train.sh conceptnet-100k 15 saved/saved_ckg_model saved_entity_embedding/conceptnet/cn_bert_emb_dict.pkl 500 256 100 ConvTransE 10 1234 1e-20 0.25 0.25 0.25 0.0003 1024 Adam 5 300 RWGCN_NET 50000 1324 ../../bert_model_embeddings/nodes-lm-conceptnet/cn_fasttext_dict.pkl 300 0.2 5 100 50 0.1 ../../Concept_Centre/ConceptNet/
 ```
 
 In order to train the CPNC-S model on ATOMIC, run the following command:
 
 ```bash
-bash train.sh atomic 500 saved/saved_ckg_model saved_entity_embedding/atomic/at_bert_emb_dict.pkl 500 256 100 ConvTransE 10 1234 1e-20 0.20 0.20 0.20 0.0001 1024 Adam 5 300 RWGCN_NET 50000 1324 ../bert_model_embeddings/nodes-lm-atomic/at_fasttext_dict.pkl 300 0.2 3 100 50 0.1 ../Concept_Centre/atomic/
+bash train.sh atomic 500 saved/saved_ckg_model saved_entity_embedding/atomic/at_bert_emb_dict.pkl 500 256 100 ConvTransE 10 1234 1e-20 0.20 0.20 0.20 0.0001 1024 Adam 5 300 RWGCN_NET 50000 1324 ../../bert_model_embeddings/nodes-lm-atomic/at_fasttext_dict.pkl 300 0.2 3 100 50 0.1 ../../Concept_Centre/atomic/
 ```
 
 This trains the model and saves the model under the `./saved/saved_ckg_model/` directory.
