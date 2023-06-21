@@ -8,7 +8,7 @@ from sentence_transformers import LoggingHandler, SentenceTransformer, util, Inp
 import numpy as np
 import os
 
-f = open('../CPNC-I/data/ConceptNet/cn_node_names.txt', 'r', encoding = 'utf-8')
+f = open('../CSKGCompletion/CPNC-S/data/ConceptNet/cn_node_names.txt', 'r', encoding = 'utf-8')
 data_nodes = f.readlines()
 nodes = []
 for line in data_nodes:
@@ -16,8 +16,9 @@ for line in data_nodes:
 f.close()
 
 model_save_path = '../CP_model/ConceptNet/'
-if not os.path.exists(model_save_path):
-    os.makedirs(model_save_path)
+embedding_save_path = '../bert_model_embeddings/nodes-lm-conceptnet/'
+if not os.path.exists(embedding_save_path):
+    os.makedirs(embedding_save_path)
     
 sentence_model = SentenceTransformer(model_save_path)
 all_nodes_features = sentence_model.encode(nodes)

@@ -24,6 +24,12 @@ There are three parts in this repo:
 
 ### Constrastive Pretraining
 
+To train the CP model ,  enter the following directory:
+
+```bash
+cd ContrastivePretraining/
+```
+
 Train Constrastive Pretraining Model for ATOMIC and CN-100K datasets:
 
 ```bash
@@ -42,9 +48,15 @@ the semantic embeddings of nodes are saved in `./bert_model_embeddings/nodes-lm-
 
 The CPNC-I model need the extra fasttext embeddings of nodes.
 
-You can download the embeddings [here]( https://pan.baidu.com/s/1tb_VDern8FO2NI8FwNaNpg?pwd=c8c5).
+You can download the semantic embeddings of nodes and fasttext embeddings of nodes [here]( https://pan.baidu.com/s/1tb_VDern8FO2NI8FwNaNpg?pwd=c8c5).
 
 ###  Nodes Clustering
+
+To train the CP model ,  enter the following directory:
+
+```bash
+cd NodesClustering/
+```
 
 Then, perform nodes clustering:
 

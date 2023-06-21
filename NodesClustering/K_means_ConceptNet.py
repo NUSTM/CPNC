@@ -12,6 +12,7 @@ from kmeans_pytorch import kmeans
 from sentence_transformers import LoggingHandler, SentenceTransformer, util, InputExample
 import json
 from sklearn.decomposition import PCA
+import os
 
 def load_json(path):
     f = open(path, 'r')
@@ -20,7 +21,7 @@ def load_json(path):
 
     return data
 
-f = open('../CPNC-I/data/ConceptNet/cn_node_names.txt', 'r', encoding = 'utf-8')
+f = open('../CSKGCompletion/CPNC-S/data/ConceptNet/cn_node_names.txt', 'r', encoding = 'utf-8')
 data = f.readlines()
 nodes = []
 for line in data:

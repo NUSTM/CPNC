@@ -23,8 +23,8 @@ import random
 
 datasets_name = 'ConceptNet'
 #datasets_name = 'Atomic'
-neg_num = 1
-repeated_neg_num = 1
+neg_num = 30
+repeated_neg_num = 30
 
 #### Just some code to print debug information to stdout
 logging.basicConfig(format='%(asctime)s - %(message)s',
@@ -64,9 +64,9 @@ def add_to_samples(sent1, sent2, label):
 nodes = []
 head_nodes = {}
 if datasets_name == 'ConceptNet':
-    f = open('../CPNC-I/data/ConceptNet/train.txt', 'r', encoding = 'utf-8')
+    f = open('../CSKGCompletion/CPNC-S/data/ConceptNet/train.txt', 'r', encoding = 'utf-8')
 elif datasets_name == 'Atomic':
-    f = open('../CPNC-I/data/atomic/train.preprocessed.txt', 'r', encoding = 'utf-8')
+    f = open('../CSKGCompletion/CPNC-S/data/atomic/train.preprocessed.txt', 'r', encoding = 'utf-8')
 train_txt = f.readlines()
 for line in train_txt:
     line = line.replace('\n', '')
@@ -98,13 +98,13 @@ train_data = {}
 print('neg')
 
 if datasets_name == 'ConceptNet':
-    file_name = '../CPNC-I/data/ConceptNet/train.txt'
-    val_file_name = '../CPNC-I/data/ConceptNet/valid.txt'
-    test_file_name = '../CPNC-I/data/ConceptNet/test.txt'
+    file_name = '../CSKGCompletion/CPNC-S/data/ConceptNet/train.txt'
+    val_file_name = '../CSKGCompletion/CPNC-S/data/ConceptNet/valid.txt'
+    test_file_name = '../CSKGCompletion/CPNC-S/data/ConceptNet/test.txt'
 elif datasets_name == 'Atomic':
-    file_name = '../CPNC-I/data/atomic/train.preprocessed.txt'
-    val_file_name = '../CPNC-I/data/atomic/valid.preprocessed.txt'
-    test_file_name = '../CPNC-I/data/atomic/test.preprocessed.txt'
+    file_name = '../CSKGCompletion/CPNC-S/data/atomic/train.preprocessed.txt'
+    val_file_name = '../CSKGCompletion/CPNC-S/data/atomic/valid.preprocessed.txt'
+    test_file_name = '../CSKGCompletion/CPNC-S/data/atomic/test.preprocessed.txt'
  
 with open(file_name, 'r', encoding = 'utf-8') as f:
     train_txt = f.readlines()
