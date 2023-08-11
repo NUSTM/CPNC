@@ -52,7 +52,7 @@ the semantic embeddings of nodes are saved in `./bert_model_embeddings/nodes-lm-
 
 The CPNC-I model need the extra fasttext embeddings of nodes.
 
-You can download the semantic embeddings of nodes and fasttext embeddings of nodes [baidu_disk]( https://pan.baidu.com/s/1tb_VDern8FO2NI8FwNaNpg?pwd=c8c5) [google_driven](https://drive.google.com/file/d/1cXg-ppMVU_iWlkEGfQcW1AyQAWmww0AK/view?usp=sharing).
+You can download the semantic embeddings of nodes and fasttext embeddings of nodes [baidu_disk]( https://pan.baidu.com/s/1tb_VDern8FO2NI8FwNaNpg?pwd=c8c5), [google_driven](https://drive.google.com/file/d/1cXg-ppMVU_iWlkEGfQcW1AyQAWmww0AK/view?usp=sharing).
 
 ###  Nodes Clustering
 
