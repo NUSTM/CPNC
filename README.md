@@ -12,7 +12,11 @@ Codes for the paper [Commonsense Knowledge Graph Completion Via Contrastive Pret
 
 ## Data
 
-The dataset are provided in [CPNC-S-data](https://pan.baidu.com/s/1bHQT9fHtvlgUHf-4NhEmcA?pwd=jgym  ) and [CPNC-I-data ](https://pan.baidu.com/s/1K7pFff0zrxMzpDhmBSHR8Q?pwd=rxpv ). Plese download it and unzip the file under `./CSKGCompletion/CPNC-S/`  and `./CSKGCompletion/CPNC-I/`, respectively.
+You can download CPNC-S-data here: [CPNC-S-data-baidu-disk](https://pan.baidu.com/s/1bHQT9fHtvlgUHf-4NhEmcA?pwd=jgym  ), [CPNC-S-data-baidu-disk](https://drive.google.com/file/d/1kKyzqotYIoWUPrfzxPZKisxCn_mjFZJ2/view?usp=sharing).
+
+And you can download CPNC-I-data here:  [CPNC-I-data-baidu-disk](https://pan.baidu.com/s/1K7pFff0zrxMzpDhmBSHR8Q?pwd=rxpv ) , [CPNC-I-data-google-driven](https://drive.google.com/file/d/1N8zeFhD01lfWCJciOKLPX_TRLTYtabEw/view?usp=sharing).
+
+Plese download it and unzip the file under `./CSKGCompletion/CPNC-S/`  and `./CSKGCompletion/CPNC-I/`, respectively.
 
 ## Training 
 
@@ -48,7 +52,7 @@ the semantic embeddings of nodes are saved in `./bert_model_embeddings/nodes-lm-
 
 The CPNC-I model need the extra fasttext embeddings of nodes.
 
-You can download the semantic embeddings of nodes and fasttext embeddings of nodes [here]( https://pan.baidu.com/s/1tb_VDern8FO2NI8FwNaNpg?pwd=c8c5).
+You can download the semantic embeddings of nodes and fasttext embeddings of nodes [baidu_disk]( https://pan.baidu.com/s/1tb_VDern8FO2NI8FwNaNpg?pwd=c8c5) [google_driven](https://drive.google.com/file/d/1cXg-ppMVU_iWlkEGfQcW1AyQAWmww0AK/view?usp=sharing).
 
 ###  Nodes Clustering
 
@@ -67,7 +71,7 @@ python K_means_ConceptNet.py  # get the nodes clustering results in CN-100K
 
 The nodes clustering results are saved in `./Concept_Centre/atomic/`  and `./Concept_Centre/ConceptNet/`.
 
-You can download the nodes clustering [here](https://pan.baidu.com/s/1AiX-wfZTDiB9lcaZJ2pSsQ?pwd=legy ).
+You can download the nodes clustering [baidu_disk](https://pan.baidu.com/s/1AiX-wfZTDiB9lcaZJ2pSsQ?pwd=legy ), [google_driven](https://drive.google.com/file/d/1FPMBQrh0DYEfPUW9g9aFFyoPsROlL6Pf/view?usp=sharing).
 
 ### CSKG Completion
 
